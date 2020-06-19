@@ -1,0 +1,200 @@
+<html>
+  <head>
+    <title>Namještaj - Narudžba namještaja</title>
+    <%- include ('../Djelimicno/_header'); -%>
+  </head>
+  <%- include ('../Djelimicno/_navbar'); -%>
+
+  <section class="page-section text-black mb-0" id="odabir-namjestaja">
+    <div class="container">
+      <h1 class="font-weight-light text-center text-lg-left mt-4 mb-0">
+        Odabir namještaja
+      </h1>
+      <div class="d-flex mt-2">
+        <div>
+          <a href="/namjestaj">
+            <button class="btn btn-info mx-2">Sve</button>
+          </a>
+        </div>
+        <div>
+          <a href="/namjestaj/stolovi"
+            ><button class="btn btn-info mx-2">Stolovi</button></a
+          >
+        </div>
+        <div>
+          <a href="/namjestaj/stolice"
+            ><button class="btn btn-info mx-2">Stolice</button></a
+          >
+        </div>
+        <div>
+          <a href="/namjestaj/ormari"
+            ><button class="btn btn-info mx-2">Ormari</button></a
+          >
+        </div>
+      </div>
+
+      <hr class="mt-2 mb-5" />
+
+      <div class="row text-center text-lg-left">
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <div>
+              <img
+                class="img-fluid img-thumbnail"
+                src="https://www.bnd-namjestaj.com/images/slider3/sliderpodloga.jpg"
+                alt=""
+              />
+              <div class="d-flex justify-content-between">
+                <p class="mb-0">Cijena: 30KN</p>
+                <button class="btn btn-primary">Kupi</button>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://www.njuskalo.hr/image-w920x690/dnevni-boravak-namjestaj/namjestaj-dnevni-boravak-kuhinjskim-stolom-stolicama-slika-125056586.jpg"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 26KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://media.xxxlutz.com/i/xxxlutz/PIABk_81aKapKfAXeq2pYISA/stolica-bez-boje-bukve-design-drvo-tekstil-cantus.jpg?w=520&h=470&upscale=padd"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 48KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://cdn.emmezeta.hr/media/catalog/product/cache/71a0a3c4bed4bde6e0639628e13ab2b6/6/2/621526-bolton-stolica-sivosmeda_1_1.jpg"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 16KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://media.xxxlutz.com/i/xxxlutz/PI00jU882OKQzp5s0J0WmC_g/stolica-bijela-boje-oplemenjenog-celika-design-metal-tekstil-novel.jpg?w=520&h=470&upscale=padd"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 13KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://cdn4.jysk.com/getimage/wd2.large/98795"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 15KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="data:image/jpeg;base64,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"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 21KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://tocak.ba/wp-content/uploads/2016/06/Ugaona-Bari.jpg"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 45.32KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSl5C9VBN2_Lp68liDQZgozVSkoFipZIWviZ8FYfOmquNv6G1vz&usqp=CAU"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 34.43KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ4oWjVr7kG1v7K-KtNf1pNmi2rlzeYSycvidSuoJTvk5TTG8Qj&usqp=CAU"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 23.45KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://domavija.ba/wp-content/uploads/2017/09/LEZAJ-LINE-2.jpg"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 32.22KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="/narudzba" class="d-block mb-4 h-100">
+            <img
+              class="img-fluid img-thumbnail"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQPmyPp6U0fmhkWeucHDfuVS44WRVd84jwIeukysy4RFd0lbmnW&usqp=CAU"
+              alt=""
+            />
+            <div class="d-flex justify-content-between">
+              <p class="mb-0">Cijena: 14.35KN</p>
+              <button class="btn btn-primary">Kupi</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</html>

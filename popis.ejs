@@ -1,0 +1,59 @@
+<script>
+  function confirmOrder(orderId) {
+    return fetch(`http://localhost:3000/api/orders/confirm/${orderId}`, {
+      method: "POST",
+    })
+      .then((res) => res.json()) // expecting a json response
+      .then((json) => {
+        console.log("Confirmed order:", json);
+        window.location.reload();
+      });
+  }
+</script>
+
+<html>
+  <head>
+    <title>Namještaj - Narudžba namještaja</title>
+    <%- include ('../../Djelimicno/_header'); -%>
+  </head>
+  <%- include ('../../Djelimicno/_navbar'); -%>
+  <body>
+    <section>
+      <div class="container" style="margin-top: 11.5rem !important;">
+        <h1 class="text-center">POPIS NARUDŽBI</h1>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <% if (orders) { %> <% orders.forEach(function(order){ %>
+            <div class="row">
+              <div class="col-12 mt-4">
+                <div class="d-flex justify-content-start pt-4">
+                  <h2 class="mr-2"><%= order.productName %></h2>
+                  <% if (order.orderStatus !== "Potvrđeno") { %>
+                  <button
+                    onclick="confirmOrder('<%=order._id%>')"
+                    class="h-25 btn btn-sm btn-secondary"
+                  >
+                    Potvrdi narudžbu
+                  </button>
+                  <% }; %>
+                </div>
+                <ul>
+                  <li>Ime i Prezime: <%= order.nameAndSurname %></li>
+                  <li>Adresa: <%= order.address %></li>
+                  <li>Broj Telefona: <%= order.telephoneNumber %></li>
+                  <li>Kontakt informacije: <%= order.contactInfo %></li>
+
+                  <li>Količina: <%= order.quantity %></li>
+                  <li>Visina: <%= order.height %></li>
+                  <li>Širina: <%= order.width %></li>
+                  <li>Dubina: <%= order.depth %></li>
+                </ul>
+              </div>
+            </div>
+            <% }); %> <% }; %>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

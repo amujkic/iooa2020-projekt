@@ -1,0 +1,17 @@
+#carousel-namjestaj {
+  width: 100%;
+  height: 400px;
+}
+.carousel-item: {
+  max-height: 400px;
+}
+
+.carousel-text-main {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  top: 350px;
+  z-index: 100;
+  text-align: center;
+}
